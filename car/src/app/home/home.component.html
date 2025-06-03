@@ -1,0 +1,43 @@
+<div class="top-header">
+  <div class="left-section">
+    <button (click)="navigatetohome()" class="logo">AutoAdvisor</button>
+    <div class="search-bar">
+      <input type="text" placeholder="Search or Ask a Question">
+      <button class="search-button">Search</button>
+    </div>
+  </div>
+
+  <div *ngIf="isAuthChecked" >
+    <ng-container *ngIf="!isLoggedIn; else loggedInBlock">
+      <button class="auth-button" (click)="navigatetologin()">Login</button>
+      <button class="auth-button" (click)="navigatetoregister()">Register</button>
+    </ng-container>
+    <ng-template #loggedInBlock>
+      <button (click)="logout()">Logout</button>
+    </ng-template>
+  </div>
+</div>
+<div class="nav-bar">
+  <div class="dropdown">
+    <button class="dropbtn">New Cars</button>
+    <div class="dropdown-content">
+      <a routerLink="/new/hatchback">Hatchback</a>
+      <a routerLink="/new/sedan">Sedan</a>
+      <a routerLink="/new/suv">SUV</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">News and Reviews</button>
+    <div class="dropdown-content">
+      <a routerLink="/news">Latest News</a>
+      <a routerLink="/reviews">Car Reviews</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">📍 Location</button>
+  </div>
+</div>
+<app-slider></app-slider>
+

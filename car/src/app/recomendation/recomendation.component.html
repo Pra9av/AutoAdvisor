@@ -1,0 +1,31 @@
+<div class="rec">
+  <div class="search-section">
+    <h3>Get to know your car</h3>
+    <p>Click on any car to view detailed information</p>
+  </div>
+
+  <div class="chip-container">
+    <button 
+      *ngFor="let car of cars; trackBy: trackByCar" 
+      class="car-chip" 
+      [class.selected]="selectedCar === car"
+      (click)="viewDetails(car)">
+      {{ car }}
+    </button>
+  </div>
+
+  <div *ngIf="isLoading" class="loading">
+    <div class="spinner"></div>
+    <p>Fetching car details...</p>
+  </div>
+
+  <div *ngIf="carDetails && !isLoading && selectedCar" class="result-box">
+    <div class="result-header">
+      <h2>{{ selectedCar }}</h2>
+      <button class="close-btn" (click)="clearSelection()">×</button>
+    </div>
+    <div class="result-content">
+      <p>{{ carDetails }}</p>
+    </div>
+  </div>
+</div>

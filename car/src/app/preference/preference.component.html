@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="sidebar">
+    <a (click)="navigatetohome()" class="logo">AutoAdvisor</a>
+    <button class="menu"
+      [class.active]="currentStep === 1" 
+      (click)="goToStep(1)">
+      🚗 Car Info
+    </button>
+    <button class="menu"
+      [class.active]="currentStep === 2" 
+      (click)="goToStep(2)">
+      🎛️ Preferences
+    </button>
+    <button class="menu"
+      [class.active]="currentStep === 3" 
+      (click)="goToStep(3)">
+      ✅ Confirmation
+    </button>
+    
+  </div>
+
+  <div class="main-content">
+    <div *ngIf="currentStep === 1" class="step-content">
+      <h2>Select a Car</h2>
+      <app-recomendation></app-recomendation>
+    </div>
+  <div class="main-content">
+    <div *ngIf="currentStep === 2" class="step-content">
+      <h2>What are your must-haves?</h2>
+      <app-form></app-form>
+    </div>
+
+    
