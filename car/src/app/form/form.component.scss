@@ -8,10 +8,15 @@
 }
 
 h2 {
+  font-family: fantasy;
   text-align: center;
-  margin-bottom: 25px;
-  color: #333;
-  font-size: 24px;
+  font-weight: 70;
+  font-size: 25px;
+}
+
+.nav{
+  border-bottom: 2px solid whitesmoke;
+
 }
 
 .container{
@@ -20,8 +25,7 @@ h2 {
   padding: 10px;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   background: whitesmoke;
-  height: 100%;
-  border-radius: 30px;
+  
 }
 
 .back-btn {
@@ -35,6 +39,15 @@ h2 {
   transition: transform 0.3s;
   &:hover { transform: translateY(-2px); }
   
+}
+
+.logo {
+ font-size: 40px;
+  font-weight: bolder;
+  color: #ff5722;
+  background-color: white;
+  font-family: fantasy;
+  margin-left: 25px;
 }
 
 form {

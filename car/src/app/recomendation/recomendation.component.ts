@@ -14,7 +14,26 @@ export class RecomendationComponent {
   cars: string[] = [
     "Maruti Swift", "Hyundai Creta", "Tata Nexon EV", "Mahindra Thar",
     "Honda City", "Kia Seltos", "Maruti Baleno", "Tata Punch",
-    "MG Hector", "Hyundai Verna", "Maruti Brezza", "Toyota Innova"
+    "MG Hector", "Hyundai Verna", "Maruti Brezza", "Toyota Innova","Mahindra Scorpio N",
+  "Mahindra XUV700",
+  "Kia Sonet",
+  "Tata Harrier",
+  "Renault Kiger",
+  "Hyundai Venue",
+  "Skoda Slavia",
+  "Volkswagen Virtus",
+  "MG Astor",
+  "Hyundai i20",
+  "Toyota Fortuner",
+  "Tata Tiago",
+  "Tata Tigor",
+  "Maruti Ciaz",
+  "Renault Triber",
+  "Nissan Magnite",
+  "Citroen C3",
+  "Honda Amaze",
+  "Toyota Urban Cruiser Hyryder",
+  "Maruti Grand Vitara", "Jeep Compass" 
   ];
 
   selectedCar: string = '';
@@ -62,7 +81,6 @@ CONS:
   console.log('redirects home');
 }
   private extractResponseText(response: any): string {
-    // Handle different API response formats
     if (typeof response === 'string') {
       return response;
     }
@@ -107,7 +125,6 @@ CONS:
       }
     }
 
-    // Fallback if parsing fails
     if (!this.description && !this.pros.length && !this.cons.length) {
       this.description = text;
     }
@@ -123,9 +140,9 @@ CONS:
     this.selectedCar = '';
     this.resetData();
   }
-  goBack2(){
-    this.router.navigate(['/preference']);
-  }
+  // goBack2(){
+  //   this.router.navigate(['/preference']);
+  // }
 
   trackByCar(index: number, car: string): string {
     return car;

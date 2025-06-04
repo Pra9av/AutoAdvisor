@@ -5,6 +5,7 @@
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   background: #fafafa;
   min-height: 100vh;
+  width: 80%;
 }
 
 .header {
@@ -19,21 +20,24 @@
 }
 
 .logo {
-  font-size: 35px;
-  color: orangered;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #ff5722;
+  background-color: white;
   font-family: fantasy;
-  cursor: pointer;
+  margin-left: 25px;
+  margin-top: 6px;
 }
 
 .back-btn {
   background: linear-gradient(135deg, #6366f1, #8b5cf6);
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 9px 20px;
   border-radius: 25px;
   cursor: pointer;
+  margin-left: 88%;
   transition: transform 0.3s;
-  
   &:hover { transform: translateY(-2px); }
 }
 
@@ -45,10 +49,10 @@
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   
   h1 {
-    font-size: 36px;
-    font-weight: 800;
-    color: #1e293b;
-    margin-bottom: 8px;
+    font-family: fantasy;
+    text-align: center;
+    font-weight: 70;
+    font-size: 40px; 
   }
   
   p {
@@ -61,7 +65,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 12px;
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
 }
 

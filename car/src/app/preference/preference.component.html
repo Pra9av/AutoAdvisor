@@ -1,4 +1,5 @@
-<div class="container">
+<a (click)="navigatetohome()" class="logo">AutoAdvisor</a>
+<!-- <div class="container"> -->
   <div class="header">
     <h1>How would you like to find your car?</h1>
     <p>Choose your preferred way to discover the perfect vehicle</p>
@@ -15,8 +16,14 @@
     <div class="option-card" (click)="browseCars()">
       <div class="icon">🚗</div>
       <h3>Browse All Cars</h3>
-      <p>Explore our complete collection of vehicles by category</p>
+      <p>Explore our complete collection of cars along with their advantages and disadvantages</p>
+      <button class="btn">View Cars</button>
+    </div>
+    <div class="option-card" (click)="browseCars()">
+      <div class="icon">⚖️</div>
+      <h3>Compare Cars</h3>
+      <p>Compare cars side by side</p>
       <button class="btn">View Cars</button>
     </div>
   </div>
-</div>
+<!-- </div> -->

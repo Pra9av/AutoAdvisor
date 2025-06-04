@@ -20,6 +20,9 @@ export class PreferenceComponent {
   browseCars() {
     this.router.navigate(['/recomendation']);
   }
-
+navigatetohome(){
+  this.router.navigate(['/home'])
+  console.log('redirects home');
+}
   
 }

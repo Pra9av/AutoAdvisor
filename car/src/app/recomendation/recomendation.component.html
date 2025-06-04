@@ -1,11 +1,9 @@
+<div class="logo" (click)="navigatetohome()">AutoAdvisor</div>
 <div class="container">
-  <header class="header">
-    <div class="logo" (click)="navigatetohome()">AutoAdvisor</div>
-    <button class="back-btn" (click)="goBack2()">← Back</button>
-    <button *ngIf="selectedCar" class="back-btn" (click)="goBack()">← Back</button>
-  </header>
-
-  <!-- Car Selection -->
+  <!-- <header class="header"> -->
+    <!-- <button class="back-btn" (click)="goBack2()">← Back</button> -->
+  <!-- </header> -->
+<button *ngIf="selectedCar" class="back-btn" (click)="goBack()">← Back</button> 
   <div *ngIf="!selectedCar" class="selection-view">
     <h1>Choose Your Car</h1>
     <p>Select a car to see insights</p>
@@ -16,7 +14,6 @@
     </div>
   </div>
 
-  <!-- Car Details -->
   <div *ngIf="selectedCar" class="details-view">
     <div class="details-header">
       <h2>{{ selectedCar }}</h2>

@@ -1,8 +1,11 @@
-<button class="back-btn" (click)="goBack()">← Back</button>
+<!-- <button class="back-btn" (click)="goBack()">← Back</button> -->
+ <div class="nav">
+  <a (click)="navigatetohome()" class="logo">AutoAdvisor</a>
+ </div>
 <div class="container">
 <div class="form-container">
   <h2>Choose Your Car Preferences</h2>
-  <form [formGroup]="preferenceForm" (ngSubmit)="onSubmit()">
+  <form *ngIf="preferenceForm" [formGroup]="preferenceForm" (ngSubmit)="onSubmit()">
 
     <label>Fuel Type:</label>
     <select formControlName="fuel">
@@ -10,7 +13,6 @@
       <option value="Diesel">Diesel</option>
       <option value="Petrol">Petrol</option>
       <option value="CNG">CNG</option>
-
     </select>
 
     <label>Seller Type:</label>
@@ -31,10 +33,17 @@
     <input type="number" formControlName="maxPrice" placeholder="e.g. 1200000" />
 
     <label>Year</label>
-    <input type="number" formControlName="Year" placeholder="e.g. 2020" />
+    <input type="number" formControlName="year" placeholder="e.g. 2020" />
 
-    <button type="submit">Search Cars</button>
+    <button type="submit">GET RECOMENDATION</button>
   </form>
 </div>
+<div *ngIf="cars.length > 0">
+  <h3>Recommended Cars:</h3>
+  <ul>
+    <li *ngFor="let car of cars">
+      {{ car.name }} - {{ car.fuel }} - ₹{{ car.selling_price }} - {{ car.transmission }} - {{ car.year}}
+    </li>
+  </ul>
 </div>
-
+</div>
