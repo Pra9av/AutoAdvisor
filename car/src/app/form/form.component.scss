@@ -1,0 +1,83 @@
+.form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 10px 25px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 24px;
+}
+
+.container{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: whitesmoke;
+  height: 100%;
+  border-radius: 30px;
+}
+
+.back-btn {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-left: 2%;
+  transition: transform 0.3s;
+  &:hover { transform: translateY(-2px); }
+  
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #444;
+}
+
+input,
+select {
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+}
+
+button {
+  margin-top: 30px;
+  padding: 12px;
+  background-color: orangered;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: green;
+}

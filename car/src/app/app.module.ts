@@ -18,6 +18,11 @@ import { provideHttpClient } from '@angular/common/http';
 import { RecomendationComponent } from './recomendation/recomendation.component';
 import { PreferenceComponent } from './preference/preference.component';
 import { FormComponent } from './form/form.component';
+
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { UploadComponent } from './upload/upload.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,15 +42,22 @@ import { FormComponent } from './form/form.component';
     SliderComponent,
     RecomendationComponent,
     PreferenceComponent,
-    FormComponent
+    FormComponent,
+    UploadComponent
+
+
 
 ],
   providers: [
     provideFirebaseApp(() => initializeApp({ projectId: "autoadvisor-8ffb0", appId: "1:779761401151:web:54bb45efc6f7c80c91678a", storageBucket: "autoadvisor-8ffb0.firebasestorage.app", apiKey: "AIzaSyDPdhH1StN0wYUg-tEbBuirfg3LrQFq1u4", authDomain: "autoadvisor-8ffb0.firebaseapp.com", messagingSenderId: "779761401151", measurementId: "G-2W38W9J4QN" })),
     provideAuth(() => getAuth()),
+
+    provideDatabase(() => getDatabase()),
+
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
     provideHttpClient()
+
   ],
   bootstrap: [AppComponent]
 })

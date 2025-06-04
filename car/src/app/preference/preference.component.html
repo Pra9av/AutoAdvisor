@@ -1,33 +1,22 @@
 <div class="container">
-  <div class="sidebar">
-    <a (click)="navigatetohome()" class="logo">AutoAdvisor</a>
-    <button class="menu"
-      [class.active]="currentStep === 1" 
-      (click)="goToStep(1)">
-      🚗 Car Info
-    </button>
-    <button class="menu"
-      [class.active]="currentStep === 2" 
-      (click)="goToStep(2)">
-      🎛️ Preferences
-    </button>
-    <button class="menu"
-      [class.active]="currentStep === 3" 
-      (click)="goToStep(3)">
-      ✅ Confirmation
-    </button>
-    
+  <div class="header">
+    <h1>How would you like to find your car?</h1>
+    <p>Choose your preferred way to discover the perfect vehicle</p>
   </div>
 
-  <div class="main-content">
-    <div *ngIf="currentStep === 1" class="step-content">
-      <h2>Select a Car</h2>
-      <app-recomendation></app-recomendation>
-    </div>
-  <div class="main-content">
-    <div *ngIf="currentStep === 2" class="step-content">
-      <h2>What are your must-haves?</h2>
-      <app-form></app-form>
+  <div class="options">
+    <div class="option-card" (click)="goToPreferences()">
+      <div class="icon">🎯</div>
+      <h3>Answer Preferences</h3>
+      <p>Tell us what you're looking for and we'll match you with the perfect car</p>
+      <button class="btn">Start Quiz</button>
     </div>
 
-    
+    <div class="option-card" (click)="browseCars()">
+      <div class="icon">🚗</div>
+      <h3>Browse All Cars</h3>
+      <p>Explore our complete collection of vehicles by category</p>
+      <button class="btn">View Cars</button>
+    </div>
+  </div>
+</div>
