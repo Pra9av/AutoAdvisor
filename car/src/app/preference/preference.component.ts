@@ -20,9 +20,19 @@ export class PreferenceComponent {
   browseCars() {
     this.router.navigate(['/recomendation']);
   }
-navigatetohome(){
-  this.router.navigate(['/home'])
-  console.log('redirects home');
-}
-  
+
+  compareModels() {
+    this.router.navigate(['/compare']);
+    console.log('Navigate to compare models');
+  }
+
+  budgetCalculator() {
+    this.router.navigate(['/budget-calculator']);
+    console.log('Navigate to budget calculator');
+  }
+
+  navigatetohome() {
+    this.router.navigate(['/home']);
+    console.log('redirects home');
+  }
 }

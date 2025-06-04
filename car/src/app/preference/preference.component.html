@@ -1,29 +1,51 @@
-<a (click)="navigatetohome()" class="logo">AutoAdvisor</a>
-<!-- <div class="container"> -->
+<div class="container">
   <div class="header">
-    <h1>How would you like to find your car?</h1>
-    <p>Choose your preferred way to discover the perfect vehicle</p>
+    <div class="logo" (click)="navigatetohome()">AutoAdvisor</div>
+    <h1 class="title">Find Your Perfect Car</h1>
+    <p class="subtitle">Choose how you'd like to discover your next vehicle</p>
   </div>
-
-  <div class="options">
-    <div class="option-card" (click)="goToPreferences()">
-      <div class="icon">🎯</div>
-      <h3>Answer Preferences</h3>
-      <p>Tell us what you're looking for and we'll match you with the perfect car</p>
-      <button class="btn">Start Quiz</button>
+  
+  <div class="choices">
+    <div class="choice-card" (click)="goToPreferences()">
+      <div class="choice-content">
+        <div class="icon-wrapper">
+          <div class="choice-icon">📃</div>
+        </div>
+        <h3 class="choice-title">Guided Selection</h3>
+        <p class="choice-desc">Answer quick questions to get personalized recommendations</p>
+        <div class="choice-btn">
+          <span>Start Quiz</span>
+          <div class="btn-arrow">→</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="choice-card" (click)="browseCars()">
+      <div class="choice-content">
+        <div class="icon-wrapper">
+          <div class="choice-icon">🚗</div>
+        </div>
+        <h3 class="choice-title">Browse Collection</h3>
+        <p class="choice-desc">Explore our complete range of vehicles and compare</p>
+        <div class="choice-btn">
+          <span>View Cars</span>
+          <div class="btn-arrow">→</div>
+        </div>
+      </div>
     </div>
 
-    <div class="option-card" (click)="browseCars()">
-      <div class="icon">🚗</div>
-      <h3>Browse All Cars</h3>
-      <p>Explore our complete collection of cars along with their advantages and disadvantages</p>
-      <button class="btn">View Cars</button>
-    </div>
-    <div class="option-card" (click)="browseCars()">
-      <div class="icon">⚖️</div>
-      <h3>Compare Cars</h3>
-      <p>Compare cars side by side</p>
-      <button class="btn">View Cars</button>
+    <div class="choice-card" (click)="compareModels()">
+      <div class="choice-content">
+        <div class="icon-wrapper">
+          <div class="choice-icon">⚖️</div>
+        </div>
+        <h3 class="choice-title">Compare Models</h3>
+        <p class="choice-desc">Side-by-side comparison of features, specs, and pricing</p>
+        <div class="choice-btn">
+          <span>Compare</span>
+          <div class="btn-arrow">→</div>
+        </div>
+      </div>
     </div>
   </div>
-<!-- </div> -->
+</div>

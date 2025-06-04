@@ -12,13 +12,38 @@
 }
 .logo {
   font-size: 40px;
-  font-weight: bolder;
-  color: #ff5722;
-  background-color: white;
+  font-weight: 700;
+  color: #ea580c;
+  background: transparent;
+  border: none;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 5;
   font-family: fantasy;
 }
-.logo:hover{
+
+.logo::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ea580c, #fb923c);
+  transition: width 0.3s ease;
+  
+}
+
+.logo:hover::after {
+  width: 100%;
+}
+
+.logo:hover {
+  color: #fb923c;
   background-color: transparent;
+  transform: translateY(-1px);
 }
 
 .search-bar {
