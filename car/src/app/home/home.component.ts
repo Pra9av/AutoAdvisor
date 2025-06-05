@@ -13,6 +13,9 @@ export class HomeComponent implements OnInit {
   isLoggedIn = false;
   isAuthChecked = false;
 
+  sidebarOpen = false;
+  isAdmin = false;
+
 constructor(private router: Router,private auth:Auth) {}
 
 ngOnInit() {
@@ -23,9 +26,26 @@ console.log('Checking auth state...');
       this.isAuthChecked = true;
       console.log('Auth check complete. Logged in', this.isLoggedIn);
       if(user) {
-        alert('logged in successfully!!');
+        // alert('logged in successfully!!');
       }
     });
+  }
+
+navigatetoref() {
+    this.router.navigate(['/recomendation']);
+    console.log('redirects to reccomendation');
+  }
+
+navigatetoadmin() {
+    this.router.navigate(['/admin']);
+    console.log('redirects to admin');
+  }
+toggleSidebar() {
+    this.sidebarOpen = !this.sidebarOpen;
+  }
+
+  closeSidebar() {
+    this.sidebarOpen = false;
   }
 
 

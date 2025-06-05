@@ -1,11 +1,15 @@
 <div class="top-header">
   <div class="left-section">
+    <button class="hamburger" aria-label="Toggle menu" (click)="toggleSidebar()">
+      &#9776;
+    </button>
     <button (click)="navigatetohome()" class="logo">AutoAdvisor</button>
     <div class="search-bar">
       <input type="text" placeholder="Search or Ask a Question">
       <button class="search-button">Search</button>
     </div>
   </div>
+
 
   <div *ngIf="isAuthChecked" >
     <ng-container *ngIf="!isLoggedIn; else loggedInBlock">
@@ -17,6 +21,17 @@
     </ng-template>
   </div>
 </div>
+
+<div class="sidebar" [class.open]="sidebarOpen" role="navigation" aria-label="Main Menu">
+  <a routerLink="/home" (click)="navigatetohome()">Home</a>
+  <a routerLink="/recomendation" (click)="navigatetoref()">Browse Cars</a>
+  <a routerLink="/news" (click)="closeSidebar()">Latest News</a>
+  <a routerLink="/reviews" (click)="closeSidebar()">Car Recomender</a> 
+  <a routerLink="/reviews" (click)="closeSidebar()">Caromparison</a>
+  <a routerLink="/admin" (click)="navigatetoadmin()"> Admin Dashboard</a>
+
+</div>
+
 <div class="nav-bar">
   <div class="dropdown">
     <button class="dropbtn">New Cars</button>
@@ -36,4 +51,8 @@
   </div>
 </div>
 <app-slider></app-slider>
-
+<br>
+<br>
+<br>
+<br>
+<app-carnews></app-carnews>

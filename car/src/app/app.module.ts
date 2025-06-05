@@ -20,6 +20,8 @@ import { PreferenceComponent } from './preference/preference.component';
 import { FormComponent } from './form/form.component';
 
 import { UploadComponent } from './upload/upload.component';
+import { AdminComponent } from './home/admin/admin.component';
+import { CarnewsComponent } from './home/carnews/carnews.component';
 
 
 @NgModule({
@@ -28,7 +30,7 @@ import { UploadComponent } from './upload/upload.component';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-   
+
 
 
     ],
@@ -42,10 +44,9 @@ import { UploadComponent } from './upload/upload.component';
     RecomendationComponent,
     PreferenceComponent,
     FormComponent,
-    UploadComponent
-
-
-
+    UploadComponent,
+    AdminComponent,
+    CarnewsComponent
 ],
   providers: [
     provideFirebaseApp(() => initializeApp({ projectId: "autoadvisor-8ffb0", appId: "1:779761401151:web:54bb45efc6f7c80c91678a", storageBucket: "autoadvisor-8ffb0.firebasestorage.app", apiKey: "AIzaSyDPdhH1StN0wYUg-tEbBuirfg3LrQFq1u4", authDomain: "autoadvisor-8ffb0.firebaseapp.com", messagingSenderId: "779761401151", measurementId: "G-2W38W9J4QN" })),

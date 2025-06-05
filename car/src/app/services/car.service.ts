@@ -17,7 +17,7 @@ export class CarService {
       conditions.push(where('fuel', '==', preferences.fuel));
     }
     if (preferences.seller_type) {
-      conditions.push(where('sellerType', '==', preferences.seller_type));
+      conditions.push(where('seller_type', '==', preferences.seller_type));
     }
     if (preferences.transmission) {
       conditions.push(where('transmission', '==', preferences.transmission));
@@ -29,7 +29,7 @@ export class CarService {
       conditions.push(where('year', '<=', Number(preferences.year)));
     }
 
-    const q = query(carsCollection, ...conditions, orderBy('selling_price', 'asc'), limit(8));
+    const q = query(carsCollection, ...conditions, orderBy('selling_price', 'asc'));
 
     return collectionData(q, { idField: 'id' }) as Observable<any[]>;
   }

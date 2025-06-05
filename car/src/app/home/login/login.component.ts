@@ -13,13 +13,16 @@ email = '';
 
   constructor(private auth: Auth, private router: Router) {}
 
-
   login() {
     signInWithEmailAndPassword(this.auth, this.email, this.password)
       .then((userCredential) => {
-        localStorage.setItem('isLoggedIn', 'true'); 
+      const user = userCredential.user;
+      if (user.email === 'autoadvisor@gmail.com') {
+        this.router.navigate(['/admin']);
+      } else {
         this.router.navigate(['/home']);
-      })
+      }
+    })
       .catch((error) => {
         console.error('Login error:', error);
         alert('Login failed. Please check your credentials.');

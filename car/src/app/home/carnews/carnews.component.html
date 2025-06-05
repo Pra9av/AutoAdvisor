@@ -1,0 +1,13 @@
+
+<div class="news">
+    <h2>Latest Car News</h2>
+
+<div class="news-grid">
+  <div class="news-item" *ngFor="let article of articles">
+    <h3>{{ article.title }}</h3>
+    <img *ngIf="article.image" [src]="article.image" alt="Car Image" />
+    <p>{{ article.description }}</p>
+    <a [href]="article.url" target="_blank">Read more</a>
+  </div>
+</div>
+</div>

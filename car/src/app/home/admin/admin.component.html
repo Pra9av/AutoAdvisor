@@ -1,0 +1,42 @@
+<div class="dashboard-container">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo" (click)="navigatetohome()">AutoAdvisor</div>
+    <nav>
+      <a routerLink="/admin/add-car">Add Car</a>
+      <a (click)="navigatetoref()"> View Cars</a>
+      <a routerLink="/admin/view-users"> View Users</a>
+      <a routerLink="/admin/analytics"> Analytics</a>
+      <a routerLink="/admin/settings"> Settings</a>
+      <button class="logout-btn" (click)="logout()"> Logout</button>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="header">
+      <h1>Admin Dashboard</h1>
+    </div>
+
+    <div class="dashboard-grid">
+      <div class="card" routerLink="/admin/add-car">
+        <h3> Add Car</h3>
+        <p>Add new car listings for recommendations</p>
+      </div>
+        <div class="card" (click)="navigatetoref()">
+        <h3> View Cars</h3>
+        <p>Manage cars</p>
+      </div>
+      <div class="card" routerLink="/admin/view-users">
+        <h3> View Users</h3>
+        <p>Manage registered user accounts</p>
+      </div>
+      <div class="card" routerLink="/admin/analytics">
+        <h3>Analytics</h3>
+        <p>Track app usage and popular car stats</p>
+      </div>
+    </div>
+  </main>
+
+</div>

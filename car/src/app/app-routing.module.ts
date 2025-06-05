@@ -6,6 +6,8 @@ import { RegisterComponent } from './home/register/register.component';
 import { PreferenceComponent } from './preference/preference.component';
 import { RecomendationComponent } from './recomendation/recomendation.component';
 import { FormComponent } from './form/form.component';
+import { AdminComponent } from './home/admin/admin.component';
+import { AdminAuthGuard } from './home/admin/Guard/adminguard.guard';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -14,7 +16,8 @@ const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'preference',component:PreferenceComponent},
   {path:'recomendation',component:RecomendationComponent},
-  {path:'form',component:FormComponent}
+  {path:'form',component:FormComponent},
+  { path: 'admin', component: AdminComponent, canActivate: [AdminAuthGuard] }
 
 ];
 

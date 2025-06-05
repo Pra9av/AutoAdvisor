@@ -21,9 +21,9 @@
   transition: all 0.3s ease;
   position: relative;
   padding: 5;
+  padding-left: 0px;
   font-family: fantasy;
 }
-
 .logo::after {
   content: '';
   position: absolute;
@@ -109,6 +109,8 @@ button {
   padding: 10px 30px;
   background-color: #f7f7f7;
   border-top: 1px solid #ddd;
+  padding-left: 65px;
+
 }
 
 .nav-bar .dropdown {
@@ -150,5 +152,83 @@ button {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+
+
+
+/* Hamburger button */
+.hamburger {
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #ea580c;
+  cursor: pointer;
+  user-select: none;
+  padding: 4px 8px;
+  transition: color 0.3s ease;
+}
+
+.hamburger:hover {
+    color: #fb923c;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 80;
+  left: -280px;
+  width: 280px;
+  height: 100vh;
+  background: black;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding-top: 80px;
+  padding-top: 0px;
+
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar a {
+  display: block;
+  padding: 25px 30px;
+  color: #e1e5f2;
+  text-decoration: none;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  background: orangered;
+  padding-left: 30px;
+}
+
+/* When sidebar is open, you could optionally shift the nav-bar */
+.nav-bar {
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.open ~ .nav-bar {
+  margin-left: 250px;
+} 
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    top: 50px;
+    width: 200px;
+  }
+  .sidebar a {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+  .nav-bar.sidebar-open {
+    margin-left: 200px;
+  }
 }
 
