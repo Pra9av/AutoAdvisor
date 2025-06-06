@@ -8,6 +8,8 @@ import { RecomendationComponent } from './recomendation/recomendation.component'
 import { FormComponent } from './form/form.component';
 import { AdminComponent } from './home/admin/admin.component';
 import { AdminAuthGuard } from './home/admin/Guard/adminguard.guard';
+import { CarnewsComponent } from './home/carnews/carnews.component';
+import { EmicalculatorComponent } from './emicalculator/emicalculator.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -17,7 +19,9 @@ const routes: Routes = [
   {path:'preference',component:PreferenceComponent},
   {path:'recomendation',component:RecomendationComponent},
   {path:'form',component:FormComponent},
-  { path: 'admin', component: AdminComponent, canActivate: [AdminAuthGuard] }
+  { path: 'admin', component: AdminComponent, canActivate: [AdminAuthGuard] },
+  {path:'emicalc',component:EmicalculatorComponent}
+  // {path:'carnews',component:CarnewsComponent}
 
 ];
 

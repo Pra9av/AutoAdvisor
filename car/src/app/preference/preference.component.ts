@@ -26,10 +26,14 @@ export class PreferenceComponent {
     console.log('Navigate to compare models');
   }
 
-  budgetCalculator() {
-    this.router.navigate(['/budget-calculator']);
-    console.log('Navigate to budget calculator');
+  emicalc() {
+    this.router.navigate(['/emicalc']);
   }
+
+  // budgetCalculator() {
+  //   this.router.navigate(['/budget-calculator']);
+  //   console.log('Navigate to budget calculator');
+  // }
 
   navigatetohome() {
     this.router.navigate(['/home']);

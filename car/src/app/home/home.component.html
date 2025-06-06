@@ -25,8 +25,8 @@
 <div class="sidebar" [class.open]="sidebarOpen" role="navigation" aria-label="Main Menu">
   <a routerLink="/home" (click)="navigatetohome()">Home</a>
   <a routerLink="/recomendation" (click)="navigatetoref()">Browse Cars</a>
-  <a routerLink="/news" (click)="closeSidebar()">Latest News</a>
-  <a routerLink="/reviews" (click)="closeSidebar()">Car Recomender</a> 
+  <a (click)="navigatetocarnews(); closeSidebar()">Latest News</a>
+  <a routerLink="/form" (click)="navigatetorec()">Car Recomender</a> 
   <a routerLink="/reviews" (click)="closeSidebar()">Caromparison</a>
   <a routerLink="/admin" (click)="navigatetoadmin()"> Admin Dashboard</a>
 
@@ -55,4 +55,9 @@
 <br>
 <br>
 <br>
-<app-carnews></app-carnews>
+<br>
+<br>
+<div id="car-news">
+  <app-carnews></app-carnews>
+</div>
+

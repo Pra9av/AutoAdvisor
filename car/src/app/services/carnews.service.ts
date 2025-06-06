@@ -12,7 +12,7 @@ export class CarnewsService {
   constructor(private http: HttpClient) {}
 
   getCarNews(query: string = 'cars') {
-    const url = `${this.baseUrl}?q=${encodeURIComponent(query)}&token=${this.apiKey}&lang=en`;
+    const url = `${this.baseUrl}?q=${encodeURIComponent(query)}&token=${this.apiKey}&lang=en&max=6`;
     return this.http.get<any>(url);
   }
 }

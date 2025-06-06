@@ -22,6 +22,7 @@ import { FormComponent } from './form/form.component';
 import { UploadComponent } from './upload/upload.component';
 import { AdminComponent } from './home/admin/admin.component';
 import { CarnewsComponent } from './home/carnews/carnews.component';
+import { EmicalculatorComponent } from './emicalculator/emicalculator.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { CarnewsComponent } from './home/carnews/carnews.component';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
+    EmicalculatorComponent,
 
 
 

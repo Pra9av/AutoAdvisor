@@ -40,6 +40,19 @@ navigatetoadmin() {
     this.router.navigate(['/admin']);
     console.log('redirects to admin');
   }
+
+navigatetorec() {
+    this.router.navigate(['/form']);
+    console.log('redirects to recomendation form');
+  }
+
+navigatetocarnews() {
+  const element = document.getElementById('car-news');
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
 toggleSidebar() {
     this.sidebarOpen = !this.sidebarOpen;
   }

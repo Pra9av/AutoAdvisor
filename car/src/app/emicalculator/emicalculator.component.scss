@@ -1,0 +1,56 @@
+h2 {
+  text-align: center;
+  color: black;
+  font-family: fantasy;
+  font-weight: 100;
+}
+h3{
+    margin-left: 20px;
+}
+
+input {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.container{
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 100px;
+    background-color: lightgray;
+    border-radius: 30px;
+    width: 520px;
+    padding-top: 2px;
+    padding-bottom: 15px;
+
+}
+
+button {
+  display: block;
+  width: 95%;
+  margin: 15px auto;
+  padding: 12px;
+  background-color: orangered;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: green;
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 15px;
+  color: #333;
+}

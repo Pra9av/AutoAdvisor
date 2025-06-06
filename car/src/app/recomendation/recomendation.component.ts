@@ -51,15 +51,15 @@ export class RecomendationComponent {
     
     const prompt = `About ${car}:
 DESCRIPTION: Brief overview in 2 sentences
-PROS: 
+PROS:
 • [advantage 1]
-• [advantage 2] 
+• [advantage 2]
 • [advantage 3]
 • [advantage 4]
 CONS:
 • [drawback 1]
 • [drawback 2]
-• [drawback 3] 
+• [drawback 3]
 • [drawback 4]`;
     
     this.openai.getCarDetails(prompt).subscribe({
@@ -151,4 +151,4 @@ CONS:
   trackByIndex(index: number, item: string): number {
     return index;
   }
-}
+} 

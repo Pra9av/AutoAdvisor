@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>EMI Calculator</h2>
+<h3>
+    Enter the Loan amount
+</h3>
+<input type="number" [(ngModel)]="loanAmount" placeholder="Loan Amount">
+<h3>
+    Enter the interest rate
+</h3>
+<input type="number" [(ngModel)]="interestRate" placeholder="Interest Rate (%)">
+<h3>
+    Enter loan tenure
+</h3>
+<input type="number" [(ngModel)]="loanTenure" placeholder="Tenure (months)">
+
+<button (click)="calculateEMI()">Calculate</button>
+
+<p *ngIf="emiResult !== null">EMI: ₹{{ emiResult }}</p>
+</div>
+
